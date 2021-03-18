@@ -1,16 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jonathan
- * Date: 17/03/21
- * Time: 23:47
- */
+
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity()
+ */
 class Medico
 {
     public $crm;
     public $nome;
+
 }
