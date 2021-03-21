@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Medico;
 use App\Helper\MedicoFactory;
+use App\Repository\MedicosRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Id;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,12 +23,19 @@ class MedicosController extends AbstractController
      * @var MedicoFactory
      */
     private $medicoFactory;
+    /**
+     * @var MedicosRepository
+     */
+    private $medicosRepository;
 
-    public function __construct(EntityManagerInterface $entityManager, MedicoFactory $medicoFactory)
+    public function __construct(EntityManagerInterface $entityManager,
+                                MedicoFactory $medicoFactory,
+                                MedicosRepository $medicosRepository)
     {
 
         $this->entityManager = $entityManager;
         $this->medicoFactory = $medicoFactory;
+        $this->medicosRepository = $medicosRepository;
     }
 
     /**
@@ -50,11 +58,8 @@ class MedicosController extends AbstractController
      */
     public function buscarTodos(): Response
     {
-        $repositorioDeMedicos = $this
-            ->getDoctrine()
-            ->getRepository(Medico::class);
 
-        $medicoList = $repositorioDeMedicos->findAll();
+        $medicoList = $this->medicosRepository->findAll();
         return new JsonResponse($medicoList);
     }
 
@@ -111,10 +116,22 @@ class MedicosController extends AbstractController
      */
     public function buscaMedico(int $id)
     {
-        $repositorioDeMedicos = $this
-            ->getDoctrine()
-            ->getRepository(Medico::class);
-        $medico = $repositorioDeMedicos->find($id);
+
+        $medico = $this->medicosRepository->find($id);
         return $medico;
     }
+
+    /**
+     * @Route("/especialidades/{especialidadeId}/medicos/", methods={"GET"})
+     */
+    public function buscarPorEspecialidade(int $especialidadeId): Response
+    {
+
+        $medicos = $this->medicosRepository->findBy([
+            'especialidade' => $especialidadeId
+        ]);
+
+        return new JsonResponse($medicos);
+    }
+
 }
