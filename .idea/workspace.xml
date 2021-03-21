@@ -4,10 +4,6 @@
     <list default="true" id="2d873a3c-03bd-47a3-8d11-291da71bd3fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EspecialidadesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EspecialidadesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MedicosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedicosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Especialidade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Especialidade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Medico.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medico.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/MedicoFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/MedicoFactory.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/EspecialidadesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="419">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="e#34#63#0#PHP" expanded="true" />
               </folding>
@@ -195,18 +191,18 @@
       <workItem from="1616091143506" duration="5974000" />
       <workItem from="1616160688313" duration="8424000" />
       <workItem from="1616246978197" duration="8355000" />
-      <workItem from="1616280551096" duration="3870000" />
+      <workItem from="1616280551096" duration="6084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36476000" />
+    <option name="totallyTimeSpent" value="38690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="702" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19318181" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19318181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -318,8 +314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EspecialidadesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="419">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="e#34#63#0#PHP" expanded="true" />
           </folding>

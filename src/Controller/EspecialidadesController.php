@@ -66,4 +66,31 @@ class EspecialidadesController extends AbstractController
         return new JsonResponse($this->repository->find($id));
     }
 
+    /**
+     * @Route("/especialidades/{id}", methods={"PUT"})
+     */
+    public function atualizar(int $id, Request $request): Response
+    {
+        $dadosRequest = $request->getContent();
+        $dadosEmJson = json_decode($dadosRequest);
+
+        $especialidade = $this->repository->find($id);
+        $especialidade->setDescricao($dadosEmJson->descricao);
+
+        $this->entityManager->flush();
+
+        return new JsonResponse($especialidade);
+    }
+
+    /**
+     * @Route("/especialidades/{id}", methods={"DELETE"})
+     */
+    public function remove(int $id): Response
+    {
+        $especialista = $this->repository->find($id);
+        $this->entityManager->remove($especialista);
+        $this->entityManager->flush();
+
+        return new Response('',Response::HTTP_NO_CONTENT);
+    }
 }
