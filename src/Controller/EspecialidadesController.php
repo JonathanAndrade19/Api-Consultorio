@@ -21,18 +21,11 @@ class EspecialidadesController extends BaseController
     }
 
     /**
-     * @Route("/especialidades/{id}", methods={"PUT"})
+     * @param Especialidade $entidadeExistente
+     * @param Especialidade $entidadeEnviada
      */
-    public function atualizar(int $id, Request $request): Response
+    public function atualizarEntidadeExixtente($entidadeExistente, $entidadeEnviada)
     {
-        $dadosRequest = $request->getContent();
-        $dadosEmJson = json_decode($dadosRequest);
-
-        $especialidade = $this->repository->find($id);
-        $especialidade->setDescricao($dadosEmJson->descricao);
-
-        $this->entityManager->flush();
-
-        return new JsonResponse($especialidade);
+        $entidadeExistente->setDescricao($entidadeEnviada->getDescricao());
     }
 }

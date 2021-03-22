@@ -26,6 +26,12 @@ criar_medico:
   methods:
     - POST
 
+atualiza_medico:
+  path: /medicos/{id}
+  controller: App\Controller\MedicosController::atualiza
+  methods:
+    - PUT
+
 especialidades:
   path: /especialidades
   controller: App\Controller\EspecialidadesController::buscarTodos
@@ -49,3 +55,9 @@ criar_especialidade:
   controller: App\Controller\EspecialidadesController::novo
   methods:
     - POST
+
+atualiza_especialidade:
+  path: /especialidades/{id}
+  controller: App\Controller\EspecialidadesController::atualiza
+  methods:
+    - PUT

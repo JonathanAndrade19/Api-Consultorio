@@ -33,27 +33,6 @@ abstract class BaseController extends AbstractController
         $this->entityManager = $entityManager;
         $this->factory = $factory;
     }
-    
-    public function buscarTodos(): Response
-    {
-
-        $entityList = $this->repository->findAll();
-        return new JsonResponse($entityList);
-    }
-
-    public function buscarUm(int $id): Response
-    {
-        return new JsonResponse($this->repository->find($id));
-    }
-
-    public function remove(int $id): Response
-    {
-        $entidade = $this->repository->find($id);
-        $this->entityManager->remove($entidade);
-        $this->entityManager->flush();
-
-        return new Response('',Response::HTTP_NO_CONTENT);
-    }
 
     public function novo(Request $request): Response
     {
@@ -66,5 +45,46 @@ abstract class BaseController extends AbstractController
         return new JsonResponse($entidade);
 
     }
+
+    public function buscarTodos(): Response
+    {
+
+        $entityList = $this->repository->findAll();
+        return new JsonResponse($entityList);
+    }
+
+    public function buscarUm(int $id): Response
+    {
+        return new JsonResponse($this->repository->find($id));
+    }
+
+    public function atualiza(int $id, Request $request): Response
+    {
+        $corpoRequisicao = $request->getContent();
+        $entidadeEnviada = $this->factory->criarEntidade($corpoRequisicao);
+
+        $entidadeExistente = $this->repository->find($id);
+
+        if (is_null($entidadeExistente)) {
+            return new Response('', Response::HTTP_NOT_FOUND);
+        }
+
+        $this->atualizarEntidadeExixtente($entidadeExistente, $entidadeEnviada);
+
+        $this->entityManager->flush();
+
+        return new JsonResponse($entidadeExistente);
+    }
+
+    public function remove(int $id): Response
+    {
+        $entidade = $this->repository->find($id);
+        $this->entityManager->remove($entidade);
+        $this->entityManager->flush();
+
+        return new Response('',Response::HTTP_NO_CONTENT);
+    }
+
+    abstract public function atualizarEntidadeExixtente($entidadeExistente, $entidadeEnviada);
 
 }

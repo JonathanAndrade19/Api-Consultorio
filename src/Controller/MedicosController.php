@@ -22,39 +22,6 @@ class MedicosController extends BaseController
     }
 
     /**
-     * @Route("/medicos/{id}", methods={"PUT"})
-     */
-    public function atualiza(int $id, Request $request): Response
-    {
-        $corpoRequisicao = $request->getContent();
-        $medicoEnviado = $this->medicoFactory->criarMedico($corpoRequisicao);
-
-        $medicoExistente = $this->buscaMedico($id);
-
-        if (is_null($medicoExistente)) {
-            return new Response('', Response::HTTP_NOT_FOUND);
-        }
-
-        $medicoExistente->setCrm($medicoEnviado->getCrm())
-                        ->serNome( $medicoEnviado->getNome());
-
-        $this->entityManager->flush();
-
-        return new JsonResponse($medicoExistente);
-    }
-    
-    /**
-     * @param int $id
-     * @return object|null
-     */
-    public function buscaMedico(int $id)
-    {
-
-        $medico = $this->repository->find($id);
-        return $medico;
-    }
-
-    /**
      * @Route("/especialidades/{especialidadeId}/medicos/", methods={"GET"})
      */
     public function buscarPorEspecialidade(int $especialidadeId): Response
@@ -65,6 +32,18 @@ class MedicosController extends BaseController
         ]);
 
         return new JsonResponse($medicos);
+    }
+
+    /**
+     * @param Medico $entidadeExistente
+     * @param Medico $entidadeEnviada
+     */
+    public function atualizarEntidadeExixtente($entidadeExistente, $entidadeEnviada)
+    {
+        $entidadeExistente
+            ->setCrm($entidadeEnviada->getCrm())
+            ->setNome($entidadeEnviada->getNome())
+            ->setEspecialidade($entidadeEnviada->getEspecialidade());
     }
 
 }
