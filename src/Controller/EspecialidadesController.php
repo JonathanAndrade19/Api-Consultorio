@@ -6,6 +6,7 @@ use App\Entity\Especialidade;
 use App\Helper\EspecialidadeFactory;
 use App\Repository\EspecialidadeRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Routing\Annotation\Route;
 
 class EspecialidadesController extends BaseController
 {
