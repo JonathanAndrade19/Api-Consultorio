@@ -15,8 +15,16 @@ class ExtratorDadosRequest
             ? $queryString['sort']
             : null;
         unset($queryString['sort']);
+        $paginaAtual = array_key_exists('page', $queryString)
+            ? $queryString['page']
+            : 1;
+        unset($queryString['page']);
+        $itensPorPagina = array_key_exists('itensPorPagina', $queryString)
+            ? $queryString['itensPorPagina']
+            : 5;
+        unset($queryString['itensPorPagina']);
 
-    return [$queryString, $dadosOrdenacao];
+    return [$queryString, $dadosOrdenacao, $paginaAtual, $itensPorPagina];
     }
     
     public function buscarDadosOrdenacao(Request $request)
@@ -31,5 +39,11 @@ class ExtratorDadosRequest
         [$filtro, ] = $this->buscaDadosRequest($request);
 
         return $filtro;
+    }
+
+    public function buscaDadosPaginacao(Request $request)
+    {
+        [, , $paginaAtual, $itensPorPagina] = $this->buscaDadosRequest($request);
+        return [$paginaAtual, $itensPorPagina];
     }
 }
