@@ -55,11 +55,11 @@ abstract class BaseController extends AbstractController
 
     public function buscarTodos(Request $request): Response
     {
+        $filtro = $this->extratorDadosRequest->buscarDadosFiltro($request);
         $informacoesDeOrdenacao = $this->extratorDadosRequest->buscarDadosOrdenacao($request);
-        $informacoesDeFiltro = $this->extratorDadosRequest->buscarDadosFiltro($request);
 
-        $entityList = $this->repository->findBy($informacoesDeFiltro, $informacoesDeOrdenacao);
-        return new JsonResponse($entityList);
+        $lista = $this->repository->findBy($filtro, $informacoesDeOrdenacao);
+        return new JsonResponse($lista);
     }
 
     public function buscarUm(int $id): Response

@@ -10,24 +10,26 @@ class ExtratorDadosRequest
 
     private function buscaDadosRequest(Request $request)
     {
-        $informacoesDeOrdenacao = $request->query->get('sort');
-        $informacoesDeFiltro = $request->query->all();
-        unset($informacoesDeFiltro['sort']);
+        $queryString = $request->query->all();
+        $dadosOrdenacao = array_key_exists('sort', $queryString)
+            ? $queryString['sort']
+            : null;
+        unset($queryString['sort']);
 
-        return [$informacoesDeOrdenacao, $informacoesDeFiltro];
+    return [$queryString, $dadosOrdenacao];
     }
     
     public function buscarDadosOrdenacao(Request $request)
     {
-        [$informacoesDeOrdenacao, ] = $this->buscaDadosRequest($request);
+        [, $ordenacao] = $this->buscaDadosRequest($request);
 
-        return $informacoesDeOrdenacao;
+        return $ordenacao;
     }
 
     public function buscarDadosFiltro(Request $request)
     {
-        [, $informacoesDeFiltro] = $this->buscaDadosRequest($request);
+        [$filtro, ] = $this->buscaDadosRequest($request);
 
-        return $informacoesDeFiltro;
+        return $filtro;
     }
 }
