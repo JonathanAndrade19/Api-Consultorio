@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Helper\EntidadeFactory;
 use App\Helper\ExtratorDadosRequest;
+use App\Helper\ResponseFactory;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -53,6 +54,10 @@ abstract class BaseController extends AbstractController
 
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function buscarTodos(Request $request): Response
     {
         $filtro = $this->extratorDadosRequest->buscarDadosFiltro($request);
@@ -64,12 +69,27 @@ abstract class BaseController extends AbstractController
             $informacoesDeOrdenacao,
             $itensPorPagina,
             ($paginaAtual - 1) * $itensPorPagina);
-        return new JsonResponse($lista);
+
+        $fabricaResposta = new ResponseFactory(
+            true,
+            $lista,
+            Response::HTTP_OK,
+            $paginaAtual,
+            $itensPorPagina
+        );
+        return $fabricaResposta->getResponse();
     }
 
     public function buscarUm(int $id): Response
     {
-        return new JsonResponse($this->repository->find($id));
+        $entidade = $this->repository->find($id);
+        $statusResposta = is_null($entidade) ? Response::HTTP_NO_CONTENT : Response::HTTP_OK;
+        $fabricaResposta = new ResponseFactory(
+            true,
+            $entidade,
+            $statusResposta
+        );
+        return $fabricaResposta->getResponse();
     }
 
     public function atualiza(int $id, Request $request): Response

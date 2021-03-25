@@ -4,7 +4,6 @@
     <list default="true" id="2d873a3c-03bd-47a3-8d11-291da71bd3fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/ExtratorDadosRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/ExtratorDadosRequest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +16,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Helper/ExtratorDadosRequest.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="43" column="39" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="391">
+              <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+              <folding>
+                <element signature="e#35#66#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Helper/ResponseFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="351">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding>
-                <element signature="e#35#66#0#PHP" expanded="true" />
+                <element signature="e#31#81#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,6 +70,7 @@
         <option value="$PROJECT_DIR$/src/Controller/MedicosController.php" />
         <option value="$PROJECT_DIR$/src/Controller/EspecialidadesController.php" />
         <option value="$PROJECT_DIR$/src/Helper/ExtratorDadosRequest.php" />
+        <option value="$PROJECT_DIR$/src/Helper/ResponseFactory.php" />
         <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
       </list>
     </option>
@@ -146,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +182,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,18 +231,19 @@
       <workItem from="1616446737203" duration="1635000" />
       <workItem from="1616504009145" duration="7522000" />
       <workItem from="1616603997990" duration="599000" />
-      <workItem from="1616615805625" duration="3334000" />
+      <workItem from="1616615805625" duration="3825000" />
+      <workItem from="1616681222594" duration="4518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63258000" />
+    <option name="totallyTimeSpent" value="68267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="702" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20454545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20757575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -402,15 +406,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Helper/ExtratorDadosRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="674">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helper/ResponseFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+          <folding>
+            <element signature="e#31#81#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
           <folding>
             <element signature="e#35#66#0#PHP" expanded="true" />
           </folding>
