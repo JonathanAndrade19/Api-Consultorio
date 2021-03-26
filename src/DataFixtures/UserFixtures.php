@@ -12,7 +12,7 @@ class UserFixtures extends Fixture
     {
        $user = new User();
        $user->setUsername('Jonathan')
-           ->setPassword('$argon2id$v=19$m=65536,t=4,p=1$TlLAd/1YYUIJM7R/HhQyUA$pOywDlZtdyfJcymX0xbNg40ahr11y4GynLY7ZDzWOjY');
+           ->setPassword('$argon2i$v=19$m=65536,t=4,p=1$QmNnQTdsUVI2NlhzeVY4MA$VJx7+YHvzXiV85KkZ2ftjgdHy3sPkcvQ4vNvIgPCt2E');
 
        $manager->persist($user);
        $manager->flush();
