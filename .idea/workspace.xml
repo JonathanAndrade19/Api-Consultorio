@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d873a3c-03bd-47a3-8d11-291da71bd3fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/consultorio-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/consultorio-alura.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Especialidade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Especialidade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Medico.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medico.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,20 +21,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Medico.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Especialidade.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="232">
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding>
+                <element signature="e#34#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,6 +65,8 @@
         <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Medico.php" />
         <option value="$PROJECT_DIR$/src/Entity/Especialidade.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" />
+        <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
       </list>
     </option>
   </component>
@@ -130,6 +130,16 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -144,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,24 +165,18 @@
             <path>
               <item name="consultorio-alura" type="b2602c69:ProjectViewProjectNode" />
               <item name="consultorio-alura" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="consultorio-alura" type="b2602c69:ProjectViewProjectNode" />
-              <item name="consultorio-alura" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="consultorio-alura" type="b2602c69:ProjectViewProjectNode" />
               <item name="consultorio-alura" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,18 +226,18 @@
       <workItem from="1616504009145" duration="7522000" />
       <workItem from="1616603997990" duration="599000" />
       <workItem from="1616615805625" duration="3825000" />
-      <workItem from="1616681222594" duration="8329000" />
+      <workItem from="1616681222594" duration="9761000" />
+      <workItem from="1616765516541" duration="5436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72078000" />
+    <option name="totallyTimeSpent" value="78946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="702" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20757575" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21060605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -245,7 +250,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32984293" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.28446773" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5061082" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -255,6 +260,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/LoginController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -408,15 +424,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Medico.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="1479">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Especialidade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        <state relative-caret-position="419">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/Version20210325212452.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/UserFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#36#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding>
+            <element signature="e#34#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
